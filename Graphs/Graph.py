@@ -8,8 +8,8 @@ Distributed under the GNU General Public License at gnu.org/licenses/gpl.html.
 
 Extended by mossa, april 2017
 """
-import Queue
-import time
+#import Queue
+#import time
 
 class node_object(object):
     __slots__ = ['order', 'vertex', 'edges']
@@ -245,7 +245,7 @@ def main(script, *args):
     print g.out_vertices(v2)
     print "*" * 10, "out_edges for '" + str(v2) + "':"
     print g.out_edges(v2)
-    
+    """
     g = Graph([v1,v2,v3,v4,v5,v6], [])
     print "*" * 10, "vertices:"
     print g.vertices()
@@ -260,7 +260,7 @@ def main(script, *args):
     g = Graph([v1,v2,v3,v4, v5, v6], [])
     print g.add_regular_edges(4)
     print "graph: " + str(g)
-
+    """
 
 if __name__ == '__main__':
     import sys
