@@ -35,7 +35,8 @@ class Edge(tuple):
     def __new__(cls, *vs):
         """The Edge constructor takes two vertices."""
         if len(vs) != 2:
-            raise ValueError, 'Edges must connect exactly two vertices.'
+            """raise ValueError, 'Edges must connect exactly two vertices.'"""
+            raise 'Edges must connect exactly two vertices.'
         return tuple.__new__(cls, vs)
 
     def __repr__(self):
@@ -80,7 +81,7 @@ class Graph(dict):
         self[v][w] = e
         self[w][v] = e
         
-    """3. Write a metod namet get_edge that takes two vertices and returns
+    """3. Write a metod named get_edge that takes two vertices and returns
        the edge between them if it exists and None otherwise"""    
     def get_edge(self, v, w):
         try:
@@ -218,33 +219,33 @@ class Graph(dict):
     
 def main(script, *args):
     v1 = Vertex('v1')
-    print v1
+    print (v1)
     v2 = Vertex('v2')
-    print v2
+    print (v2)
     v3 = Vertex('v3')
-    print v3
+    print (v3)
     v4 = Vertex('v4')
-    print v4
+    print (v4)
     v5 = Vertex('v5')
-    print v5
+    print (v5)
     v6 = Vertex('v6')
-    print v6
+    print (v6)
     e1 = Edge(v1, v2)
-    print "edges: " + str(e1)
+    print ("edges: " + str(e1))
     e2 = Edge(v1, v3)
-    print "edges: " + str(e2)
+    print ("edges: " + str(e2))
     e3 = Edge(v2, v4)
-    print "edges: " + str(e3)
+    print ("edges: " + str(e3))
     g = Graph([v1,v2,v3,v4], [e1,e2,e3])
-    print "graph: " + str(g)
-    print "*" * 10, "edges:"
-    print g.edges()
-    print "*" * 10, "vertices:"
-    print g.vertices()
-    print "*" * 10, "out_vertices for '" + str(v2) + "':"
-    print g.out_vertices(v2)
-    print "*" * 10, "out_edges for '" + str(v2) + "':"
-    print g.out_edges(v2)
+    print ("graph: " + str(g))
+    print ("*" * 10, "edges:")
+    print (g.edges())
+    print ("*" * 10, "vertices:")
+    print (g.vertices())
+    print ("*" * 10, "out_vertices for '" + str(v2) + "':")
+    print (g.out_vertices(v2))
+    print ("*" * 10, "out_edges for '" + str(v2) + "':")
+    print (g.out_edges(v2))
     """
     g = Graph([v1,v2,v3,v4,v5,v6], [])
     print "*" * 10, "vertices:"

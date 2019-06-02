@@ -20,11 +20,11 @@ def main(script, n='10', *args):
     g = Graph(vs)
 
     if g.add_regular_edges(n-2) == True:
-        print g.edges()
+        print (g.edges())
     else:
-        print "I couldn't!"
+        print ("I couldn't!")
         for v in g.vertices():
-            print len(g.out_edges(v))
+            print (len(g.out_edges(v)))
     # draw the graph
     layout = CircleLayout(g)
     gw = GraphWorld()

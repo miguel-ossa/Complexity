@@ -1180,7 +1180,7 @@ def widget_demo():
     def print_selection(event):
         """print the current color in the listbox
         """
-        print get_selection()
+        print (get_selection())
 
     def apply_color():
         """get the current color from the listbox and apply it
@@ -1269,7 +1269,7 @@ def widget_demo():
         slant = b2.swampy_var.get()
         font = tkFont.Font(family=family, size=size, weight=weight,
                            slant=slant)
-        print font.actual()
+        print (font.actual())
         item3.config(font=font)
 
     g.la(text='Font:')
@@ -1332,7 +1332,7 @@ def widget_demo():
     g.gr(3)
 
     def print_num(i):
-        print i
+        print (i)
 
     # grid the buttons
     for i in range(1, 10):
